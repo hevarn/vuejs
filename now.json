@@ -1,0 +1,305 @@
+{
+  "routes": [
+    {
+      "src": "/api/actions-stocks(/|.*)",
+      "dest": "/api/actions-stocks"
+    },
+    {
+      "src": "/api/authentication(/|.*)",
+      "dest": "/api/authentication"
+    },
+    {
+      "src": "/api/authmanagement(/|.*)",
+      "dest": "/api/authmanagement"
+    },
+    {
+      "src": "/api/buy-history(/|.*)",
+      "dest": "/api/buy-history"
+    },
+    {
+      "src": "/api/cart(/|.*)",
+      "dest": "/api/cart"
+    },
+    {
+      "src": "/api/categories(/|.*)",
+      "dest": "/api/categories"
+    },
+    {
+      "src": "/api/countries(/|.*)",
+      "dest": "/api/countries"
+    },
+    {
+      "src": "/api/couponsStripe(/|.*)",
+      "dest": "/api/couponsStripe"
+    },
+    {
+      "src": "/api/distances(/|.*)",
+      "dest": "/api/distances"
+    },
+    {
+      "src": "/api/events(/|.*)",
+      "dest": "/api/events"
+    },
+    {
+      "src": "/api/favorit-products(/|.*)",
+      "dest": "/api/favorit-products"
+    },
+    {
+      "src": "/api/kinds(/|.*)",
+      "dest": "/api/kinds"
+    },
+    {
+      "src": "/api/kulteur-stocks(/|.*)",
+      "dest": "/api/kulteur-stocks"
+    },
+    {
+      "src": "/api/mailer(/|.*)",
+      "dest": "/api/mailer"
+    },
+    {
+      "src": "/api/market(/|.*)",
+      "dest": "/api/market"
+    },
+    {
+      "src": "/api/marketEvents(/|.*)",
+      "dest": "/api/marketEvents"
+    },
+    {
+      "src": "/api/order-provider(/|.*)",
+      "dest": "/api/order-provider"
+    },
+    {
+      "src": "/api/orderInfo(/|.*)",
+      "dest": "/api/orderInfo"
+    },
+    {
+      "src": "/api/participations(/|.*)",
+      "dest": "/api/participations"
+    },
+    {
+      "src": "/api/payment(/|.*)",
+      "dest": "/api/payment"
+    },
+    {
+      "src": "/api/paymentMethods(/|.*)",
+      "dest": "/api/paymentMethods"
+    },
+    {
+      "src": "/api/press(/|.*)",
+      "dest": "/api/press"
+    },
+    {
+      "src": "/api/products(/|.*)",
+      "dest": "/api/products"
+    },
+    {
+      "src": "/api/providers(/|.*)",
+      "dest": "/api/providers"
+    },
+    {
+      "src": "/api/references(/|.*)",
+      "dest": "/api/references"
+    },
+    {
+      "src": "/api/refund(/|.*)",
+      "dest": "/api/refund"
+    },
+    {
+      "src": "/api/sell-history(/|.*)",
+      "dest": "/api/sell-history"
+    },
+    {
+      "src": "/api/setting(/|.*)",
+      "dest": "/api/setting"
+    },
+    {
+      "src": "/api/site-groupings(/|.*)",
+      "dest": "/api/site-groupings"
+    },
+    {
+      "src": "/api/stocks(/|.*)",
+      "dest": "/api/stocks"
+    },
+    {
+      "src": "/api/stripeHook(/|.*)",
+      "dest": "/api/stripeHook"
+    },
+    {
+      "src": "/api/types(/|.*)",
+      "dest": "/api/types"
+    },
+    {
+      "src": "/api/users(/|.*)",
+      "dest": "/api/users"
+    },
+    {
+      "src": "/api/varieties(/|.*)",
+      "dest": "/api/varieties"
+    },
+    {
+      "src": "/api/weight-unities(/|.*)",
+      "dest": "/api/weight-unities"
+    },
+    {
+      "src": "/api/workshops(/|.*)",
+      "dest": "/api/workshops"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "status": 404,
+      "dest": "/200.html"
+    }
+  ],
+  "functions": {
+    "api/actions-stocks.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/authentication.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/authmanagement.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/buy-history.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/cart.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/categories.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/countries.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/couponsStripe.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/distances.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/events.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/favorit-products.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/kinds.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/kulteur-stocks.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/mailer.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/market.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/marketEvents.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/order-provider.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/orderInfo.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/participations.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/payment.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/paymentMethods.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/press.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/products.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/providers.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/references.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/refund.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/sell-history.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/setting.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/site-groupings.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/stocks.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/stripeHook.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/types.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/users.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/varieties.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/weight-unities.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    },
+    "api/workshops.js": {
+      "includeFiles": "server/config/**/*",
+      "maxDuration": 60
+    }
+  },
+  "env": {
+    "NODE_CONFIG_DIR": "@config_dir"
+  }
+}

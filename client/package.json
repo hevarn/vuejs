@@ -1,0 +1,57 @@
+{
+  "name": "kanopee_koncept_front",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Akeros",
+  "private": true,
+  "eslintIgnore": [
+    ".nuxt/",
+    "static/**/*",
+    "build",
+    "dist",
+    "node_modules"
+  ],
+  "scripts": {
+    "lint": "eslint --ext .js,.vue --fix .",
+    "precommit": "npm run lint",
+    "dev": "nuxt",
+    "build": "nuxt generate",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "@feathersjs/authentication-client": "^4.5.10",
+    "@feathersjs/feathers": "^4.5.10",
+    "@feathersjs/rest-client": "^4.5.10",
+    "@nuxtjs/pwa": "3.3.5",
+    "@nuxtjs/vuetify": "1.11.2",
+    "@stripe/stripe-js": "^1.11.0",
+    "@vue/composition-api": "^0.4.0",
+    "date-fns": "^2.16.1",
+    "feathers-vuex": "^3.7.0",
+    "leaflet": "^1.7.1",
+    "nuxt": "2.15.2",
+    "nuxt-client-init-module": "^0.1.9",
+    "nuxt-facebook-pixel-module": "^1.5.0",
+    "pdfmake": "^0.1.68",
+    "vue-carousel-3d": "^0.2.0",
+    "vue-infinite-loading": "^2.4.5",
+    "xlsx": "^0.15.6"
+  },
+  "devDependencies": {
+    "@mdi/js": "^5.8.55",
+    "@nuxtjs/google-analytics": "^2.4.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "axios": "0.21.0",
+    "babel-eslint": "10.1.0",
+    "eslint-config-standard": "16.0.1",
+    "eslint-loader": "4.0.2",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.1.0",
+    "eslint-plugin-vue": "7.1.0",
+    "flipdown": "^0.3.2",
+    "pug": "3.0.0",
+    "pug-plain-loader": "1.0.0"
+  }
+}

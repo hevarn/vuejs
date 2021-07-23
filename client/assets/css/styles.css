@@ -1,0 +1,39 @@
+
+body {
+  font-family:  'AvenirNext', sans-serif !important;
+}
+h1,p {
+  font-family: 'AvenirNext', sans-serif !important;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .3s
+}
+.page-enter, .page-leave-active {
+  opacity: 0.1
+}
+
+.layout-enter-active, .layout-leave-active {
+  transition: opacity .3s
+}
+.layout-enter, .layout-leave-active {
+  opacity: 0.1
+}
+
+.slide-fade-enter-active {
+  transition: all .4s ease-out;
+}
+.slide-fade-leave-active {
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter {
+  transform: translateX(10px);
+  opacity: 0.2;
+}
+.slide-fade-leave-to {
+  transform: translateX(-10px);
+  opacity: 0.2;
+}
+.word-break-normal{
+  word-break: normal !important;
+}

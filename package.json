@@ -1,0 +1,38 @@
+{
+  "name": "kanopee_koncept",
+  "license": "MIT",
+  "private": true,
+  "description": "kanopee_koncept",
+  "author": "Akeros",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "front:dev": "lerna run --scope kanopee_koncept_front dev --stream",
+    "front:build": "lerna run --scope kanopee_koncept_front build --stream",
+    "front:lint": "lerna run --scope kanopee_koncept_front lint --stream",
+    "back:dev": "lerna run --scope kanopee_koncept_back dev --stream",
+    "back:build": "lerna run --scope kanopee_koncept_back build --stream",
+    "back:lint": "lerna run --scope kanopee_koncept_back lint --stream",
+    "dev": "lerna run dev --stream",
+    "build": "lerna run build --stream",
+    "lint": "lerna run lint --stream",
+    "publish": "lerna publish",
+    "start": "some command to be run",
+    "test": "(eslint lib || true) && jest"
+  },
+  "devDependencies": {
+    "lerna": "3.22.1",
+    "material-design-icons-iconfont": "^6.1.0",
+    "sass": "^1.35.2",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.46.0"
+  },
+  "version": "1.0.0",
+  "main": "buildNow.js",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@types/sass-loader": "^8.0.2"
+  }
+}
