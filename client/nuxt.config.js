@@ -1,4 +1,5 @@
 import { meta, link } from './manifest.js'
+import getRoutes from './utils/getRoutes'
 const BASE_URL = process.env.FAKEROOTKEY ? '/api' : 'http://localhost:3030/api'
 console.log('Pointing front to', BASE_URL)
 const buildModules = [
@@ -7,7 +8,8 @@ const buildModules = [
 const modules = [
   '@nuxtjs/pwa',
   'nuxt-client-init-module',
-  '@nuxtjs/style-resources'
+  '@nuxtjs/style-resources',
+  '@nuxtjs/sitemap'
 ]
 if (process.env.GOOGLE_ANALYTICS_ID) {
   buildModules.push('@nuxtjs/google-analytics')
@@ -39,6 +41,7 @@ const metaTags = [
   { charset: 'utf-8' },
   { name: 'viewport', content: 'width=device-width, initial-scale=1' },
   { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+  { name: 'google-site-verification', content: 'DJocjix2arX2i44RfDMGgg_CBd1vmk04ZDYa9Ac8nKY' },
   { name: 'google', content: 'notranslate' }
 ]
 
@@ -47,7 +50,6 @@ if (process.env.FB_DOMAIN_VERIF) {
     name: 'facebook-domain-verification', content: process.env.FB_DOMAIN_VERIF
   })
 }
-
 export default {
   target: 'static',
   ssr: false,
@@ -73,19 +75,31 @@ export default {
     { path: '~/components/visitor/navbar', prefix: 'VisitNav' }, /// ???
     { path: '~/components/visitor/partenaire', prefix: 'VisitPart' }
   ],
-
+  /**
+   * sitemap
+   */
+  sitemap: {
+    hostname: process.env.NODE_ENV,
+    gzip: true,
+    generate: false, // Génère une version statique du sitemap quand activé. À utiliser avec nuxt generate.
+    routes () {
+      return getRoutes()
+    }
+  },
   /*
   ** Headers of the page
   */
   head: {
-    title: 'Kanopée Koncept',
+    title: 'KanopeeKoncept Fruits et Légumes',
     htmlAttrs: {
       lang: 'fr',
       amp: true
     },
     meta: metaTags,
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/png', href: '/favicon.ico' },
+      { rel: 'canonical', href: 'https://www.kanopeekoncept/dossiers/techniques/url-canonique' }
     ],
     script: [
       { src: 'https://js.stripe.com/v3/', async: true }
@@ -167,7 +181,7 @@ export default {
       background_color: '#AECD6B',
       display: 'standalone',
       orientation: 'portrait',
-      description: 'Kanopée une application de e-commerce de paniers bio cultivés au pied de chez vous en permaculture urbaine.'
+      description: 'kanopeekoncept cultive des fruits et des legumes en circuit court où biologique sur bordeaux'
     },
     meta,
     link,

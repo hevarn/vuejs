@@ -1,16 +1,16 @@
 <template lang="pug">
   div
     Hero
-    v-row.imgHome(v-if='!$store.state.visitorNavbar.boutonClicked' class="ma-0")
-      v-img.logo(src="/logoKnoir.png" width=100)
-      v-col.title.col-sm-12.col-md-12(align="center")
+    v-row.rowCustom(v-if='!$store.state.visitorNavbar.boutonClicked' class="ma-0")
+      v-img.logo(src="/logoKnoir.png")
+      div.title.col-sm-12.col-md-12(align="center")
         div(class="logoHome")
           h1(style="color:black") Qui veut faire sa part ?
           p(style="color:black; font-weight:bold") Paniers bio et cultivés au pied de chez vous
-    v-row.ma-0(v-else)
-      v-row.imgHome1.ma-0
-        v-img.logo(src="/logoKnoir.png" width=100)
-        v-col.title.col-sm-12.col-md-12(align="center")
+    v-row.row.ma-0(v-else)
+      v-row.rowCustom.ma-0
+        v-img.logo(src="/logoKnoir.png")
+        div.title.col-sm-12.col-md-12(align="center")
           div.secondPart
             h1
               mark.titlekoncept Vous souhaitez être partenaire ?
@@ -33,19 +33,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.imgHome {
+.row {
+  position: inherit;
+}
+.rowCustom {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-size: 100% 135%;
-  height: 600px;
-  align-items: center;
-}
-
-.imgHome1 {
-  background: url('/home_koncept.jpg') no-repeat center;
-  background-size: 100% 135%;
   height: 600px;
   align-items: center;
 }
@@ -78,18 +73,6 @@ export default {
   .secondPart {
     width: 100%;
   }
-  .imgHome {
-    background: url('/homePage.jpg') no-repeat center;
-    background-size: 100% 135%;
-    height: 500px;
-    align-items: center;
-  }
-  .imgHome1 {
-    background: url('/home_koncept.jpg') no-repeat;
-    background-size: 100% 135%;
-    height: 500px;
-    align-items: center;
-  }
 
   .logo {
     max-width: 260px;
@@ -102,24 +85,8 @@ export default {
   .title {
     display: none;
   }
-
-  .imgHome {
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    align-items: center;
-    width: 100%;
-  }
-  .imgHome1 {
-    background-position: center;
-    background-size: cover;
-    height: 300px;
-    align-items: center;
-  }
-
-  .logo {
-    max-width: 180px;
-    margin: 0 auto;
+  .logo{
+    margin: 7rem auto;
     align-self: start;
   }
 }
@@ -128,25 +95,9 @@ export default {
   .title {
     display: none;
   }
-
-  .imgHome {
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    width: 100%;
-  }
-
-  .logo {
-    max-width: 180px;
-    margin: 0 auto;
+  .logo{
+    margin: 7rem auto;
     align-self: start;
-  }
-  .imgHome1 {
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    align-items: center;
-    width: 100%;
   }
 }
 </style>

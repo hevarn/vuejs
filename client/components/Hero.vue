@@ -3,7 +3,9 @@
     <v-carousel cycle hide-delimiter-background show-arrows-on-hover>
       <template #prev="{ on, attrs }">
         <v-btn color="success" v-bind="attrs" v-on="on">
-          Previous slide
+          <v-img
+            src="https://image.flaticon.com/icons/png/512/860/860739.png"
+          />
         </v-btn>
       </template>
       <template #next="{ on, attrs }">

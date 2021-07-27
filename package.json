@@ -33,6 +33,8 @@
   "main": "buildNow.js",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@mdi/font": "^5.9.55",
+    "@nuxtjs/sitemap": "^2.4.0",
     "@types/sass-loader": "^8.0.2"
   }
 }
