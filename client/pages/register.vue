@@ -127,7 +127,6 @@ div
 
 <script>
 import { userService, providersService } from '@/api'
-
 export default {
   layout: 'visitor',
   data () {

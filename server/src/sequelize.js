@@ -4,6 +4,8 @@ import logger from './logger'
 
 export default async function (app) {
   const { host, database, username, password } = app.get('mysql')
+  console.log('ouups')
+  console.log(host)
   function getTimeZone () {
     let timezone = '+02:00'
     const spring = new Date(new Date().getFullYear(), 3, -0, 3)

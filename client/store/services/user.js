@@ -1,7 +1,11 @@
+
 import feathersClient, {
   makeServicePlugin,
   BaseModel
 } from '~/plugins/feathers'
+
+// const GoogleID = '144124169257-t7643bi0o1sbs7do8fukn1knhu2ev7j1.apps.googleusercontent.com'
+// const GoogleSecret = 'VxQg67KR8hq2y05RIF11JraH'
 
 class User extends BaseModel {
   constructor (data, options, modelName) {

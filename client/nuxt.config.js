@@ -42,7 +42,9 @@ const metaTags = [
   { name: 'viewport', content: 'width=device-width, initial-scale=1' },
   { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
   { name: 'google-site-verification', content: 'DJocjix2arX2i44RfDMGgg_CBd1vmk04ZDYa9Ac8nKY' },
-  { name: 'google', content: 'notranslate' }
+  { name: 'google', content: 'notranslate' },
+  // googleAuth meta
+  { name: 'google-signin-client_id', content: '1037989579637-il1ri6cdb7vdelpnv3te9o2ml4fed66g.apps.googleusercontent.com ' }
 ]
 
 if (process.env.FB_DOMAIN_VERIF) {
@@ -102,6 +104,7 @@ export default {
       { rel: 'canonical', href: 'https://www.kanopeekoncept/dossiers/techniques/url-canonique' }
     ],
     script: [
+      { src: 'https://apis.google.com/js/platform.js', async: true },
       { src: 'https://js.stripe.com/v3/', async: true }
     ]
   },

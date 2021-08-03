@@ -35,6 +35,7 @@
                   :disabled="!valid"
                   color="success"
                   @click="connection()") Connexion
+              GoogleAuth
           v-row.mx-auto
             v-col(align="center")
               a(@click="$router.push('forgot')" color='primary') Mot de passe oublié ?
@@ -44,9 +45,11 @@
 </template>
 
 <script>
-
+import GoogleAuth from '@/components/googleAuth'
 export default {
-  components: {},
+  components: {
+    GoogleAuth
+  },
   layout: 'visitor',
   data () {
     return {
@@ -125,11 +128,17 @@ export default {
             this.$router.push(routeRedirect)
           } else {
             this.loading = false
-            this.$store.commit('notif/sendInfo', "Vous n'avez pas validé votre email, pour finaliser votre inscription, veuillez cliquer sur le lien de confirmation inclus dans l'email.")
+            this.$store.commit(
+              'notif/sendInfo',
+              "Vous n'avez pas validé votre email, pour finaliser votre inscription, veuillez cliquer sur le lien de confirmation inclus dans l'email."
+            )
           }
         } catch (e) {
           this.loading = false
-          this.$store.commit('notif/sendAlert', 'Connexion impossible : e-mail ou mot de passe invalide.')
+          this.$store.commit(
+            'notif/sendAlert',
+            'Connexion impossible : e-mail ou mot de passe invalide.'
+          )
         }
       }
     }
