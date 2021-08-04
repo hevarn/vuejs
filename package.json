@@ -23,15 +23,16 @@
     "test": "(eslint lib || true) && jest"
   },
   "devDependencies": {
-    "lerna": "3.22.1",
+    "lerna": "^4.0.0",
     "material-design-icons-iconfont": "^6.1.0",
-    "sass": "^1.35.2",
+    "sass": "^1.37.5",
     "sass-loader": "^8.0.2",
-    "webpack": "^4.46.0"
+    "webpack": "^5.48.0"
   },
   "version": "1.0.0",
   "main": "buildNow.js",
   "dependencies": {
+    "@babel/core": "^7.14.8",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@mdi/font": "^5.9.55",
     "@nuxtjs/sitemap": "^2.4.0",
