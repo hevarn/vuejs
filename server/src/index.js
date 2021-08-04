@@ -1,5 +1,5 @@
 import logger from './logger'
-import app from './ap$p'
+import app from './app'
 const port = app.get('port')
 
 process.on('unhandledRejection', (reason, p) =>

@@ -160,10 +160,10 @@ export default {
             this.provider.package
         ) > 0
           ? Math.ceil(
-              (this.order.quantity * (0 + this.order.disassemble / 100 || 1) -
+            (this.order.quantity * (0 + this.order.disassemble / 100 || 1) -
                 Number(this.order.actualStock)) /
                 this.provider.package
-            )
+          )
           : 0
     },
     needAlert (referencesProvider) {
